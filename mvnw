@@ -72,6 +72,9 @@ esac
 if [ -z "$JAVA_HOME" ] ; then
   if [ -r /etc/gentoo-release ] ; then
     JAVA_HOME=$(java-config --jre-home)
+  else
+    # minha tentativa com o Else - 2023-10-10
+    JAVA_HOME="/usr/lib/jvm/java-19-openjdk-amd64"; export JAVA_HOME
   fi
 fi
 
