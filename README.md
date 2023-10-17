@@ -4,12 +4,19 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
+Our main goal with this repository is to training and exercise the four basics REST API endpoints: create, read, update and delete.
+
+Something else that comes in handy with this repository is the way we work with H2 - the in memory database, using SQL data load local script.
+
+Let's see if we can follow this one and pratice! Good luck! :)
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
 ```shell script
 ./mvnw compile quarkus:dev
 ```
+> **_NOTE:_** Take a look at mvnw file and modified it as you wish, 'cause I had to modify it at line 77! _WSL Environment problems_! :)
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
 

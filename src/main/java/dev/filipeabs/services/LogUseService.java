@@ -1,21 +1,28 @@
 package dev.filipeabs.services;
 
+import java.util.List;
+
+import dev.filipeabs.dao.LogUseDao;
 import dev.filipeabs.models.LogUse;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class LogUseService {
 
-    public LogUse retornarLogs() {
-        return null;
+    @Inject
+    LogUseDao dao;
+
+    public List<LogUse> retornarLogs() {
+        return dao.retornarTodos();
     }
 
     public LogUse retornarLogRecente(long nrUse) {
         return null;
     }
 
-    public LogUse retornarLogs(long nrUse) {
-        return null;
+    public List<LogUse> retornarLogs(long nrUse) {
+        return dao.retornarLogs(nrUse, nrUse);
     }
 
     public LogUse inserirLog(LogUse logUse) {
